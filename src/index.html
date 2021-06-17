@@ -18,17 +18,17 @@
 <body>
 <header id="app-bar">
 <div class="logo">
-	<h1 class="logo-title">
-	RUANG BACA
+<h1 class="logo-title">
+RUANG BACA
 </div>
 
 <button id="menu" class="nav-menu" tabindex="0" aria-label="menu bar"><i class="fas fa-bars fa-2x"></i></button>
-   
+	
 <nav class="nav-bar">
 <ul class="nav-list">
-  <li class="nav-item"><a href="#katalog" class="nav-link">Katalog</a></li>
-  <li class="nav-item"><a href="#belum-selesai" class="nav-link"> Buku Belum Di Baca </a></li>
-  <li class="nav-item"><a href="#selesai" class="nav-link">Buku Selesai </a></li>
+<li class="nav-item"><a href="#catalogs" class="nav-link">Katalog</a></li>
+<li class="nav-item"><a href="#uncompletedBooks" class="nav-link"> Buku Belum Di Baca </a></li>
+<li class="nav-item"><a href="#completedBooks" class="nav-link">Buku Selesai </a></li>
 </ul>
 </nav>
 </header>
@@ -36,7 +36,7 @@
 <div id="hero">
 <div class="hero-content">
 <h1 class="hero-title" tabindex="0">
-	RUANG BACA
+RUANG BACA
 </h1>
 <blockquote>Buku adalah jendela ilmu yang akan membuka cakrawala kehidupan manusia.</blockquote>
 </div>
@@ -44,24 +44,89 @@
 
 <main>	
 <div id="container">
-	<article id="katalog" class="content">
-		<h2 class="content-title"> Katalog </h2>
-		<div class="content-inner">
-			<p> Isi Konten </p>
+<section id="catalogs" class="content">
+	<h2 class="content-title"> Katalog </h2>
+	<div class="content-inner">
+		<div class="card">
+		<i class="fas fa-angle-left fa-3x"></i>
+			<div class="card-item">
+				<h3> Your Title</h3>
+				<h4> By Author</h4>
+			</div>
+			<div class="card-item">
+				<h3> Your Title</h3>
+				<h4> By Author</h4>
+			</div>
+			<div class="card-item">
+				<h3> Your Title</h3>
+				<h4> By Author</h4>
+			</div>
+			<div class="card-item">
+				<h3> Your Title</h3>
+				<h4> By Author</h4>
+			</div>
+		<i class="fas fa-angle-right fa-3x"></i>
 		</div>
-	</article>
-	<article id="belum-selesai" class="content">
-		<h2 class="content-title"> Buku Belum Di Baca </h2>
-		<div class="content-inner">
-			<p> Isi Konten </p>
+	</div>
+	<div class="btn-container">
+		<button id="bookShow" class="btn">
+			Lihat Semua Buku
+		</button>
+</div>
+</section>
+
+<section id="BookForm" class="content">
+	<h2 class="content-title"> Tambah Buku </h2>
+	<div class="content-inner">
+		<div class='side-container'> 
+      <img src='../src/images/side.jpg'>
 		</div>
-	</article>
-	<article id="selesai" class="content">
-		<h2 class="content-title"> Buku Sudah Di Baca </h2>
-		<div class="content-inner">
-			<p> Isi Konten </p>
+
+		<form id="AddBook" class="form-container">
+			<h3 class="content-subtitle">Tambahkan Buku Yang Ingin Kamu Baca</h3>
+			<div class="book-title">
+				<label for="inputBookTitle">Judul</label>
+				<input id="inputBookTitle" placeholder="Masukkan Judul Buku" type="text" required />
+			</div>
+			<div class="book-author">
+				<label for="inputBookAuthor">Penulis</label>
+				<input id="inputBookAuthor" placeholder="Masukkan Nama Author" type="text" required />
+			</div>
+			<div class="book-year">
+				<label for="inputBookYear">Tahun</label>
+				<input id="inputBookYear" placeholder="Contoh : 2000" type="number" required />
+			</div>
+			<div class="book-status">
+				<label for="inputBookIsComplete">Selesai dibaca</label>
+				<div class="radio-container">
+					<input checked='' id='isNo' name='book-state' type='radio' value='Belum'>
+            <label for='isNo'>Belum</label>
+            <input id='isYes' name='book-state' type='radio' value='Sudah'>
+            <label for='isYes'>Sudah</label>	</div>
+			</div>
+			<div class="btn-container">
+					<button id="bookSubmit" type="submit" class="btn">
+						<i class="fas fa-save"></i>
+						Simpan Buku
+					</button>
 		</div>
-	</article>
+		</form>
+	</div>
+
+</section>
+
+<section id="uncompletedBooks" class="content">
+	<h2 class="content-title"> Buku Belum Di Baca </h2>
+	<div class="content-inner">
+		<p> Isi Konten </p>
+	</div>
+</section>
+<section id="completedBooks" class="content">
+	<h2 class="content-title"> Buku Sudah Di Baca </h2>
+	<div class="content-inner">
+		<p> Isi Konten </p>
+	</div>
+</section>
 </div>
 </main>
 <footer> 

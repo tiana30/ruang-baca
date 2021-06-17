@@ -1,3 +1,4 @@
+//Untuk Menampilkan Drawer
 const showDrawerMenu = () => {
 const menu = document.querySelector('#menu');
 const hero = document.querySelector('#hero');
@@ -25,6 +26,7 @@ const drawer = document.querySelector('.nav-bar');
 
 showDrawerMenu();
 
+//Untuk Menampilkan Nav yang aktif
 const showActiveNav = () => {
 const nav = document.querySelector(".nav-list");
 nav.addEventListener('click', function(e) {
