@@ -25,7 +25,7 @@ const drawer = document.querySelector('.nav-bar');
 
 showDrawerMenu();
 
-const showLinkActive = () => {
+const showActiveNav = () => {
 const nav = document.querySelector(".nav-list");
 nav.addEventListener('click', function(e) {
 const targetNav = e.target;
@@ -40,4 +40,4 @@ if(targetNav.classList.contains('nav-link')) {
 
 }
 
-showLinkActive();
+showActiveNav();

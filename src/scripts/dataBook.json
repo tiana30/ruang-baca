@@ -1,0 +1,43 @@
+{ "books" : [
+  {
+  "id": 1623766159532,
+  "title": "Summer in Seoul",
+  "author": "Ilana Tan",
+  "year": 2006,
+  "img" : "../images/summer.jpg",
+  "isComplete": false
+  },
+  {
+  "id": 1623766206750,
+  "title": "Autumn in Paris",
+  "author": "Ilana Tan",
+  "year": 2007,
+  "img" : "../images/summer.jpg",
+  "isComplete": false
+  },
+  {
+  "id": 1623766262845,
+  "title": "Winter in Tokyo",
+  "author": "Ilana Tan",
+  "year": 2008,
+  "img" : "../images/winter.jpg",
+  "isComplete": false
+  },
+  {
+  "id": 1623766318675,
+  "title": "Spring in London",
+  "author": "Ilana Tan",
+  "year": 2010,
+  "img" : "../images/spring.jpg",
+  "isComplete": false
+  },
+  {
+    "id": 1623766333598,
+    "title": "Sunshine Becomes You",
+    "author": "Ilana Tan",
+    "year": 2012,
+    "img" : "../images/sunshine.jpg",
+    "isComplete": false
+  }
+]
+}
