@@ -251,25 +251,17 @@ padding: 1em;
 	padding-left: 5px;
 }
 
-.book-title ,
-.book-author ,
-.book-year ,
-.book-status {
+.form-item {
 	display: flex;
 	flex-wrap: wrap;
 }
 
-.book-title label,
-.book-author label,
-.book-year label,
-.book-status label{
+.form-item label{
 	flex-basis: 35%;
 }
 
-.book-title input,
-.book-author input,
-.book-year input,
-.book-status .radio-container{
+.form-item input,
+.form-item .radio-container{
 	flex-basis: 65%;
 }
 

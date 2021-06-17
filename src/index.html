@@ -84,19 +84,19 @@ RUANG BACA
 
 		<form id="AddBook" class="form-container">
 			<h3 class="content-subtitle">Tambahkan Buku Yang Ingin Kamu Baca</h3>
-			<div class="book-title">
+			<div class="form-item">
 				<label for="inputBookTitle">Judul</label>
 				<input id="inputBookTitle" placeholder="Masukkan Judul Buku" type="text" required />
 			</div>
-			<div class="book-author">
+			<div class="form-item">
 				<label for="inputBookAuthor">Penulis</label>
 				<input id="inputBookAuthor" placeholder="Masukkan Nama Author" type="text" required />
 			</div>
-			<div class="book-year">
+			<div class="form-item">
 				<label for="inputBookYear">Tahun</label>
 				<input id="inputBookYear" placeholder="Contoh : 2000" type="number" required />
 			</div>
-			<div class="book-status">
+			<div class="form-item">
 				<label for="inputBookIsComplete">Selesai dibaca</label>
 				<div class="radio-container">
 					<input checked='' id='isNo' name='book-state' type='radio' value='Belum'>
@@ -114,7 +114,24 @@ RUANG BACA
 	</div>
 
 </section>
-
+<section id="findBooks" class="content">
+	<div class="content">
+		<h2 class="content-title">Cari Buku</h2>
+		<div class="content-inner">
+		<form id="searchBook" class="form-container">
+			<div class="form-item">
+				<label for="searchBookTitle">Judul</label>
+				<input id="searchBookTitle" type="text" />
+			</div>
+			<div class="btn-container">
+			<button class="btn" id="searchSubmit" type="submit">
+				<i class="fas fa-search"></i>
+				Cari Buku
+			</button>
+		</div>
+		</form>
+	</div>
+	</div>
 <section id="uncompletedBooks" class="content">
 	<h2 class="content-title"> Buku Belum Di Baca </h2>
 	<div class="content-inner">
