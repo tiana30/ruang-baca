@@ -1,3 +1,27 @@
+@media screen and (max-width: 520px) {
+.content-inner{
+	display: flex;
+	flex-direction: column;
+}
+
+.photos {
+	display: none;
+}
+
+.submit {
+	border-radius: 0.5em;
+	width: 100%;
+}
+
+.search {
+	width: 100%;
+}
+
+.finder {
+	width: 100%;
+}
+
+}
 @media screen and (max-width: 810px) {
 #app-bar {
 display: flex;
@@ -11,7 +35,7 @@ background: none;
 align-items: center;
 }
 
-.nav-menu .fas {
+.nav-menu .fa {
 display: inline-block;
 padding: 12px;
 color: #FFFFFF;
@@ -49,6 +73,14 @@ width: 3  00px;
 text-align: left; 
 max-height: 70px;
 padding: 0.5em;
+}
+
+.search {
+	width: 100%;
+}
+
+.finder {
+	width: 100%;
 }
 
 }

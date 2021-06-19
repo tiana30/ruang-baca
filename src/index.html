@@ -11,7 +11,7 @@
 <link rel="stylesheet" type="text/css" href="styles/responsive.css">
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet"> 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 
 </head>
 
@@ -22,13 +22,13 @@
 RUANG BACA
 </div>
 
-<button id="menu" class="nav-menu" tabindex="0" aria-label="menu bar"><i class="fas fa-bars fa-2x"></i></button>
+<button id="menu" class="nav-menu" tabindex="0" aria-label="menu bar"><i class="fa fa-bars fa-2x"></i></button>
 	
 <nav class="nav-bar">
 <ul class="nav-list">
-<li class="nav-item"><a href="#catalogs" class="nav-link">Katalog</a></li>
-<li class="nav-item"><a href="#uncompletedBooks" class="nav-link"> Buku Belum Di Baca </a></li>
-<li class="nav-item"><a href="#completedBooks" class="nav-link">Buku Selesai </a></li>
+	<li class="nav-item"><a href="#addBooks" class="nav-link"> Penambahan Buku </a></li>
+<li class="nav-item"><a href="#findBooks" class="nav-link"> Pencarian Buku </a></li>
+<li class="nav-item"><a href="#bookShelf" class="nav-link"> Rak Buku </a></li>
 </ul>
 </nav>
 </header>
@@ -44,46 +44,16 @@ RUANG BACA
 
 <main>	
 <div id="container">
-<section id="catalogs" class="content">
-	<h2 class="content-title"> Katalog </h2>
-	<div class="content-inner">
-		<div class="card">
-		<i class="fas fa-angle-left fa-3x"></i>
-			<div class="card-item">
-				<h3> Your Title</h3>
-				<h4> By Author</h4>
-			</div>
-			<div class="card-item">
-				<h3> Your Title</h3>
-				<h4> By Author</h4>
-			</div>
-			<div class="card-item">
-				<h3> Your Title</h3>
-				<h4> By Author</h4>
-			</div>
-			<div class="card-item">
-				<h3> Your Title</h3>
-				<h4> By Author</h4>
-			</div>
-		<i class="fas fa-angle-right fa-3x"></i>
-		</div>
-	</div>
-	<div class="btn-container">
-		<button id="bookShow" class="btn">
-			Lihat Semua Buku
-		</button>
-</div>
-</section>
-
 <section id="BookForm" class="content">
-	<h2 class="content-title"> Tambah Buku </h2>
+	<h2> Tambah Buku </h2>
+			<h3>Tambahkan Buku Yang Kamu Suka</h3>
 	<div class="content-inner">
-		<div class='side-container'> 
-      <img src='../src/images/side.jpg'>
+		<div class="left-container">
+			<div class="photos">
+				<img src="images/side.jpg" alt="foto buku" />
+			</div>
 		</div>
-
-		<form id="AddBook" class="form-container">
-			<h3 class="content-subtitle">Tambahkan Buku Yang Ingin Kamu Baca</h3>
+		<form id="addBooks" class="form-container submit">
 			<div class="form-item">
 				<label for="inputBookTitle">Judul</label>
 				<input id="inputBookTitle" placeholder="Masukkan Judul Buku" type="text" required />
@@ -106,7 +76,7 @@ RUANG BACA
 			</div>
 			<div class="btn-container">
 					<button id="bookSubmit" type="submit" class="btn">
-						<i class="fas fa-save"></i>
+						<i class="fa fa-save"></i>
 						Simpan Buku
 					</button>
 		</div>
@@ -114,36 +84,106 @@ RUANG BACA
 	</div>
 
 </section>
+
 <section id="findBooks" class="content">
 	<div class="content">
-		<h2 class="content-title">Cari Buku</h2>
+		<h2>Cari Buku</h2>
+		<h3>Temukan Buku Yang Kamu Baca</h3>
 		<div class="content-inner">
-		<form id="searchBook" class="form-container">
+		<form id="searchBook" class="form-container search">
 			<div class="form-item">
 				<label for="searchBookTitle">Judul</label>
 				<input id="searchBookTitle" type="text" />
 			</div>
 			<div class="btn-container">
 			<button class="btn" id="searchSubmit" type="submit">
-				<i class="fas fa-search"></i>
+				<i class="fa fa-search"></i>
 				Cari Buku
 			</button>
 		</div>
 		</form>
 	</div>
-	</div>
-<section id="uncompletedBooks" class="content">
-	<h2 class="content-title"> Buku Belum Di Baca </h2>
+
+	<section id="foundBooks" class="content hidden">
+		<h3> Buku yang ditemukan </h3>
+		<div class="content-inner">
+			<div id="listuncompletedBooks" class="list-book finder">
+
+				<article class="list-item uncompleted">
+					<div class="list-desc">
+					<h4>Summer in Seoul</h4>
+					<h5>Ilana Tan</h5>
+					<h6>2006</h6>
+					</div>
+				</article>
+		</div>
+	</section>
+
+</div>
+</section>
+
+<section id="bookShelf" class="content">
+	<h2> Rak Buku </h2>
 	<div class="content-inner">
-		<p> Isi Konten </p>
+
+	<section id="uncompletedBooks" class="content">
+		<h3> Buku Belum Di Baca </h3>
+			<div id="listuncompletedBooks" class="list-book">
+
+				<article class="list-item uncompleted">
+					<div class="list-desc">
+					<h4>Summer in Seoul</h4>
+					<h5>Ilana Tan</h5>
+					<h6>2006</h6>
+					</div>
+					<div class="btn-container">
+						<button class="btn"><i class="fa fa-check" aria-hidden="true"></i></button>
+					</div>
+				</article>
+
+			<article class="list-item uncompleted">
+				<div class="list-desc">
+					<h4>Autumn In Paris</h4>
+					<h5>Ilana Tan</h5>
+					<h6>2007</h6>
+				</div>
+					<div class="btn-container">
+						<button class="btn"><i class="fa fa-check" aria-hidden="true"></i></button>
+					</div>
+			</article>
+	</section>
+
+	<section id="completedBooks" class="content">
+		<h3> Buku Sudah Di Baca </h3>
+			<div id="listcompletedBooks" class="list-book">
+				<article class="list-item completed">
+					<div class="list-desc">
+					<h4>Winter In Tokyo</h4>
+					<h5>Ilana Tan</h5>
+					<h6>2008</h6>
+					</div>
+					<div class="btn-container">
+						<button class="btn"><i class="fa fa-undo" aria-hidden="true"></i>
+						</button>
+					</div>
+			</article>
+
+		<article class="list-item completed">
+			<div class="list-desc">
+				<h4>Spring In London</h4>
+				<h5>Ilana Tan</h5>
+				<h6>2010</h6>
+			</div>
+				<div class="btn-container">
+					<button class="btn"><i class="fa fa-undo" aria-hidden="true"></i>
+					</button>
+				</div>
+		</article>
+		</section>
+		
 	</div>
 </section>
-<section id="completedBooks" class="content">
-	<h2 class="content-title"> Buku Sudah Di Baca </h2>
-	<div class="content-inner">
-		<p> Isi Konten </p>
-	</div>
-</section>
+
 </div>
 </main>
 <footer> 
