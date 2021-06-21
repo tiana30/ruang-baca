@@ -23,10 +23,10 @@ RUANG BACA
 </div>
 
 <button id="menu" class="nav-menu" tabindex="0" aria-label="menu bar"><i class="fa fa-bars fa-2x"></i></button>
-	
+
 <nav class="nav-bar">
 <ul class="nav-list">
-	<li class="nav-item"><a href="#addBooks" class="nav-link"> Penambahan Buku </a></li>
+<li class="nav-item"><a href="#addBooks" class="nav-link"> Penambahan Buku </a></li>
 <li class="nav-item"><a href="#findBooks" class="nav-link"> Pencarian Buku </a></li>
 <li class="nav-item"><a href="#bookShelf" class="nav-link"> Rak Buku </a></li>
 </ul>
@@ -45,143 +45,101 @@ RUANG BACA
 <main>	
 <div id="container">
 <section id="BookForm" class="content">
-	<h2> Tambah Buku </h2>
-			<h3>Tambahkan Buku Yang Kamu Suka</h3>
-	<div class="content-inner">
-		<div class="left-container">
-			<div class="photos">
-				<img src="images/side.jpg" alt="foto buku" />
-			</div>
+<h2> Tambah Buku </h2>
+		<h3>Tambahkan Buku Yang Kamu Suka</h3>
+<div class="content-inner">
+	<div class="left-container">
+		<div class="photos">
+			<img src="images/side.jpg" alt="foto buku" />
 		</div>
-		<form id="addBooks" class="form-container submit">
-			<div class="form-item">
-				<label for="inputBookTitle">Judul</label>
-				<input id="inputBookTitle" placeholder="Masukkan Judul Buku" type="text" required />
-			</div>
-			<div class="form-item">
-				<label for="inputBookAuthor">Penulis</label>
-				<input id="inputBookAuthor" placeholder="Masukkan Nama Author" type="text" required />
-			</div>
-			<div class="form-item">
-				<label for="inputBookYear">Tahun</label>
-				<input id="inputBookYear" placeholder="Contoh : 2000" type="number" required />
-			</div>
-			<div class="form-item">
-				<label for="inputBookIsComplete">Selesai dibaca</label>
-				<div class="radio-container">
-					<input checked='' id='isNo' name='book-state' type='radio' value='Belum'>
-            <label for='isNo'>Belum</label>
-            <input id='isYes' name='book-state' type='radio' value='Sudah'>
-            <label for='isYes'>Sudah</label>	</div>
-			</div>
-			<div class="btn-container">
-					<button id="bookSubmit" type="submit" class="btn">
-						<i class="fa fa-save"></i>
-						Simpan Buku
-					</button>
-		</div>
-		</form>
 	</div>
+	<form id="addBooks" class="form-container submit">
+		<div class="form-item">
+			<label for="bookTitle">Judul</label>
+			<input id="bookTitle" placeholder="Masukkan Judul Buku" type="text" required />
+		</div>
+		<div class="form-item">
+			<label for="bookAuthor">Penulis</label>
+			<input id="bookAuthor" placeholder="Masukkan Nama Author" type="text" required />
+		</div>
+		<div class="form-item">
+			<label for="bookYear">Tahun</label>
+			<input id="bookYear" placeholder="Contoh : 2000" type="number" required />
+		</div>
+		<div class="form-item">
+			<label for="bookStatus">Selesai dibaca</label>
+			<div class="radio-container">
+				<input checked='' id='isNo' name='bookStatus' type='radio' value='Belum'>
+          <label for='isNo'>Belum</label>
+          <input id='isYes' name='bookStatus' type='radio' value='Sudah'>
+          <label for='isYes'>Sudah</label>	
+				</div>
+		</div>
+		<div class="btn-container">
+				<button id="bookSubmit" type="submit" class="btn">
+					<i class="fa fa-save"></i>
+					Simpan Buku
+				</button>
+	</div>
+	</form>
+</div>
 
 </section>
 
 <section id="findBooks" class="content">
-	<div class="content">
-		<h2>Cari Buku</h2>
-		<h3>Temukan Buku Yang Kamu Baca</h3>
-		<div class="content-inner">
-		<form id="searchBook" class="form-container search">
-			<div class="form-item">
-				<label for="searchBookTitle">Judul</label>
-				<input id="searchBookTitle" type="text" />
-			</div>
-			<div class="btn-container">
-			<button class="btn" id="searchSubmit" type="submit">
-				<i class="fa fa-search"></i>
-				Cari Buku
-			</button>
+<div class="content">
+	<h2>Cari Buku</h2>
+	<h3>Temukan Buku Yang Kamu Baca</h3>
+	<div class="content-inner">
+	<form id="searchBook" class="form-container search">
+		<div class="form-item">
+			<label for="searchBookTitle">Judul</label>
+			<input id="searchBookTitle" type="text" />
 		</div>
-		</form>
+		<div class="btn-container">
+		<button class="btn" id="searchSubmit" type="submit">
+			<i class="fa fa-search"></i>
+			Cari Buku
+		</button>
 	</div>
+	</form>
+</div>
 
-	<section id="foundBooks" class="content hidden">
-		<h3> Buku yang ditemukan </h3>
-		<div class="content-inner">
-			<div id="listuncompletedBooks" class="list-book finder">
+<section id="foundBooks" class="content hidden">
+	<h3> Buku yang ditemukan </h3>
+	<div class="content-inner">
+		<div id="listuncompletedBooks" class="list-book finder">
 
-				<article class="list-item uncompleted">
-					<div class="list-desc">
-					<h4>Summer in Seoul</h4>
-					<h5>Ilana Tan</h5>
-					<h6>2006</h6>
-					</div>
-				</article>
-		</div>
-	</section>
+			<article class="list-item uncompleted">
+				<div class="list-desc">
+				<h4>Summer in Seoul</h4>
+				<h5>Ilana Tan</h5>
+				<h6>2006</h6>
+				</div>
+			</article>
+	</div>
+</section>
 
 </div>
 </section>
 
 <section id="bookShelf" class="content">
-	<h2> Rak Buku </h2>
-	<div class="content-inner">
+<h2> Rak Buku </h2>
+<div class="content-inner">
 
-	<section id="uncompletedBooks" class="content">
-		<h3> Buku Belum Di Baca </h3>
-			<div id="listuncompletedBooks" class="list-book">
+<section id="uncompletedBooks" class="content">
+	<h3> Buku Belum Di Baca </h3>
+		<div id="listUncompletedBooks" class="list-book">
+		</div>
+</section>
 
-				<article class="list-item uncompleted">
-					<div class="list-desc">
-					<h4>Summer in Seoul</h4>
-					<h5>Ilana Tan</h5>
-					<h6>2006</h6>
-					</div>
-					<div class="btn-container">
-						<button class="btn"><i class="fa fa-check" aria-hidden="true"></i></button>
-					</div>
-				</article>
-
-			<article class="list-item uncompleted">
-				<div class="list-desc">
-					<h4>Autumn In Paris</h4>
-					<h5>Ilana Tan</h5>
-					<h6>2007</h6>
-				</div>
-					<div class="btn-container">
-						<button class="btn"><i class="fa fa-check" aria-hidden="true"></i></button>
-					</div>
-			</article>
+<section id="completedBooks" class="content">
+	<h3> Buku Sudah Di Baca </h3>
+		<div id="listCompletedBooks" class="list-book">
+		</div>
 	</section>
-
-	<section id="completedBooks" class="content">
-		<h3> Buku Sudah Di Baca </h3>
-			<div id="listcompletedBooks" class="list-book">
-				<article class="list-item completed">
-					<div class="list-desc">
-					<h4>Winter In Tokyo</h4>
-					<h5>Ilana Tan</h5>
-					<h6>2008</h6>
-					</div>
-					<div class="btn-container">
-						<button class="btn"><i class="fa fa-undo" aria-hidden="true"></i>
-						</button>
-					</div>
-			</article>
-
-		<article class="list-item completed">
-			<div class="list-desc">
-				<h4>Spring In London</h4>
-				<h5>Ilana Tan</h5>
-				<h6>2010</h6>
-			</div>
-				<div class="btn-container">
-					<button class="btn"><i class="fa fa-undo" aria-hidden="true"></i>
-					</button>
-				</div>
-		</article>
-		</section>
-		
-	</div>
+	
+</div>
 </section>
 
 </div>
@@ -189,7 +147,7 @@ RUANG BACA
 <footer> 
 RUANG BACA &copy; 2021, By Tia Nadya
 </footer>
-<script src="scripts/app.js">
-</script> 
+<script src="scripts/dom.js"></script> 
+<script src="scripts/app.js"></script> 
 </body>
 </html>
