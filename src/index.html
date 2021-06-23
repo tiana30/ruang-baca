@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="id">
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,78 +16,84 @@
 </head>
 
 <body>
-<header id="app-bar">
-<div class="logo">
-<h1 class="logo-title">
-RUANG BACA
-</div>
+	<header id="app-bar">
+	<div class="logo">
+		<h1 class="logo-title">
+		RUANG BACA
+	</div>
 
-<button id="menu" class="nav-menu" tabindex="0" aria-label="menu bar"><i class="fa fa-bars fa-2x"></i></button>
+	<button id="menu" class="nav-menu" tabindex="0" aria-label="menu bar">
+		<i class="fa fa-bars fa-2x"></i>
+	</button>
 
-<nav class="nav-bar">
-<ul class="nav-list">
-<li class="nav-item"><a href="#addBooks" class="nav-link"> Penambahan Buku </a></li>
-<li class="nav-item"><a href="#findBooks" class="nav-link"> Pencarian Buku </a></li>
-<li class="nav-item"><a href="#bookShelf" class="nav-link"> Rak Buku </a></li>
-</ul>
-</nav>
-</header>
+	<nav class="nav-bar">
+		<ul class="nav-list">
+			<li class="nav-item"><a href="#addBooks" class="nav-link"> Penambahan Buku </a></li>
+			<li class="nav-item"><a href="#findBooks" class="nav-link"> Pencarian Buku </a></li>
+			<li class="nav-item"><a href="#bookShelf" class="nav-link"> Rak Buku </a></li>
+		</ul>
+	</nav>
+	</header>
 
-<div id="hero">
-<div class="hero-content">
-<h1 class="hero-title" tabindex="0">
-RUANG BACA
-</h1>
-<blockquote>Buku adalah jendela ilmu yang akan membuka cakrawala kehidupan manusia.</blockquote>
-</div>
-</div>
-
-<main>	
-<div id="container">
-<section id="BookForm" class="content">
-<h2> Tambah Buku </h2>
-		<h3>Tambahkan Buku Yang Kamu Suka</h3>
-<div class="content-inner">
-	<div class="left-container">
-		<div class="photos">
-			<img src="images/side.jpg" alt="foto buku" />
+	<div id="hero">
+		<div class="hero-content">
+			<h1 class="hero-title" tabindex="0">
+			RUANG BACA
+			</h1>
+			<blockquote>Buku adalah jendela ilmu yang akan membuka cakrawala kehidupan manusia.</blockquote>
 		</div>
 	</div>
-	<form id="addBooks" class="form-container submit">
-		<div class="form-item">
-			<label for="bookTitle">Judul</label>
-			<input id="bookTitle" placeholder="Masukkan Judul Buku" type="text" required />
-		</div>
-		<div class="form-item">
-			<label for="bookAuthor">Penulis</label>
-			<input id="bookAuthor" placeholder="Masukkan Nama Author" type="text" required />
-		</div>
-		<div class="form-item">
-			<label for="bookYear">Tahun</label>
-			<input id="bookYear" placeholder="Contoh : 2000" type="number" required />
-		</div>
-		<div class="form-item">
-			<label for="bookStatus">Selesai dibaca</label>
-			<div class="radio-container">
-				<input checked='' id='isNo' name='bookStatus' type='radio' value='Belum'>
-          <label for='isNo'>Belum</label>
-          <input id='isYes' name='bookStatus' type='radio' value='Sudah'>
-          <label for='isYes'>Sudah</label>	
-				</div>
-		</div>
-		<div class="btn-container">
-				<button id="bookSubmit" type="submit" class="btn">
-					<i class="fa fa-save"></i>
-					Simpan Buku
-				</button>
-	</div>
-	</form>
-</div>
 
-</section>
+	<main>	
+	<div id="container">
+		<section id="BookForm" class="content">
+		<h2> Tambah Buku </h2>
+			<h3>Tambahkan Buku Yang Kamu Suka</h3>
+		<div class="content-inner">
+		<div class="left-container">
+			<div class="photos">
+				<img src="images/side.jpg" alt="foto buku" />
+			</div>
+		</div>
+		<form id="addBooks" class="form-container submit">
+			<div class="form-item">
+				<label for="bookTitle">Judul</label>
+				<input id="bookTitle" placeholder="Masukkan Judul Buku" type="text" required />
+			</div>
 
-<section id="findBooks" class="content">
-<div class="content">
+			<div class="form-item">
+				<label for="bookAuthor">Penulis</label>
+				<input id="bookAuthor" placeholder="Masukkan Nama Author" type="text" required />
+			</div>
+
+			<div class="form-item">
+				<label for="bookYear">Tahun</label>
+				<input id="bookYear" placeholder="Contoh : 2000" type="number" required />
+			</div>
+
+			<div class="form-item">
+				<label for="bookStatus">Selesai dibaca</label>
+				<div class="radio-container">
+					<input checked='' id='isNo' name='bookStatus' type='radio' value='Belum'>
+			          <label for='isNo'>Belum</label>
+			          <input id='isYes' name='bookStatus' type='radio' value='Sudah'>
+			          <label for='isYes'>Sudah</label>	
+					</div>
+			</div>
+			<input type="hidden" id="bookId" name="bookId">
+			<div class="btn-container">
+					<button id="bookSubmit" type="submit" class="btn">
+						<i class="fa fa-save"></i>
+						Simpan Buku
+					</button>
+		</div>
+		</form>
+		</div>
+
+	</section>
+
+	<section id="findBooks" class="content">
+	<div class="content">
 	<h2>Cari Buku</h2>
 	<h3>Temukan Buku Yang Kamu Baca</h3>
 	<div class="content-inner">
@@ -103,9 +109,9 @@ RUANG BACA
 		</button>
 	</div>
 	</form>
-</div>
+	</div>
 
-<section id="foundBooks" class="content hidden">
+	<section id="foundBooks" class="content hidden">
 	<h3> Buku yang ditemukan </h3>
 	<div class="content-inner">
 		<div id="listuncompletedBooks" class="list-book finder">
@@ -118,36 +124,36 @@ RUANG BACA
 				</div>
 			</article>
 	</div>
-</section>
+	</section>
 
-</div>
-</section>
+	</div>
+	</section>
 
-<section id="bookShelf" class="content">
-<h2> Rak Buku </h2>
-<div class="content-inner">
+	<section id="bookShelf" class="content">
+	<h2> Rak Buku </h2>
+	<div class="content-inner">
 
-<section id="uncompletedBooks" class="content">
+	<section id="uncompletedBooks" class="content">
 	<h3> Buku Belum Di Baca </h3>
 		<div id="listUncompletedBooks" class="list-book">
 		</div>
-</section>
+	</section>
 
-<section id="completedBooks" class="content">
+	<section id="completedBooks" class="content">
 	<h3> Buku Sudah Di Baca </h3>
 		<div id="listCompletedBooks" class="list-book">
 		</div>
 	</section>
-	
-</div>
-</section>
 
-</div>
-</main>
-<footer> 
-RUANG BACA &copy; 2021, By Tia Nadya
-</footer>
-<script src="scripts/dom.js"></script> 
-<script src="scripts/app.js"></script> 
+	</div>
+	</section>
+
+	</div>
+	</main>
+	<footer> 
+	RUANG BACA &copy; 2021, By Tia Nadya
+	</footer>
+	<script src="scripts/dom.js"></script> 
+	<script src="scripts/app.js"></script> 
 </body>
 </html>

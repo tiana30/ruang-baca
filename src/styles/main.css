@@ -211,11 +211,11 @@ blockquote p {
 	padding-left: 1em;
 }
 
-.btn {
+.check-btn {
+	color: #28A745;
 	display: inline-block;
 	background: transparent;
-	border: 2px solid #0193C1;
-	color: #065C75;
+	border: 2px solid #28A745;
 	display: block;
 	padding: 0.2em 0.9em;
   border-radius: 4px;
@@ -223,12 +223,59 @@ blockquote p {
 	font-size: medium;
 }
 
-.btn:active {
+.check-btn:active {
 	transform: translateY(1px);
   filter: saturate(150%);
 }
 
-.btn:hover{
+.check-btn:hover{
+	background: #28A745;
+	color: #FFFFFF;
+	cursor: pointer;
+}
+
+.trash-btn {
+	display: inline-block;
+	background: transparent;
+	border: 2px solid #DC3545;
+	display: block;
+	padding: 0.2em 0.9em;
+  border-radius: 4px;
+	line-height: 38px;
+	font-size: medium;
+	color: #DC3545;
+}
+
+.trash-btn:active {
+	transform: translateY(1px);
+  filter: saturate(150%);
+}
+
+.trash-btn:hover{
+	background: #DC3545;
+	color: #FFFFFF;
+	cursor: pointer;
+}
+
+.btn, .undo-btn {
+	display: inline-block;
+	background: transparent;
+	border: 2px solid  #0193C1;
+	color: #065C75;
+	display: block;
+	padding: 0.2em 0.9em;
+  border-radius: 4px;
+	line-height: 38px;
+	font-size: medium;
+	color: #0193C1;
+}
+
+.btn:active, .undo-btn:active {
+	transform: translateY(1px);
+  filter: saturate(150%);
+}
+
+.btn:hover, .undo-btn:hover{
 	background: #0193C1;
 	color: #FFFFFF;
 	cursor: pointer;
